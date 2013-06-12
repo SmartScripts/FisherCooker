@@ -12,7 +12,7 @@ import org.powerbot.game.api.wrappers.node.SceneObject;
 import FisherCooker.util.VARS;
 import FisherCooker.util.Methods;
 public class ChopNode extends Node{
-  
+	
 	
 	@Override
 	public boolean activate() {
@@ -21,7 +21,7 @@ public class ChopNode extends Node{
 
 	@Override
 	public void execute() {		
-		SceneObject tree = SceneEntities.getNearest(VARS.TREE_ID);
+		SceneObject tree = SceneEntities.getNearest(VARS.TREE_IDS);
 	
 		if(Inventory.isFull() && Inventory.contains(VARS.FISH_IDS)){
 			dropFish();
@@ -37,14 +37,17 @@ public class ChopNode extends Node{
 				}
 			}
 		}
-		
-		
+		else{
+			Task.sleep(50, 75);
+		}
 	}
 	
-	public void dropFish(){
+	private void dropFish(){
 		int inventoryCount = Inventory.getCount();
+		
 		if(Inventory.getItem(VARS.FISH_IDS).getWidgetChild().interact("Drop")){
-			while(inventoryCount == Inventory.getCount()){
+			Timer t = new Timer(5000);
+			while(inventoryCount == Inventory.getCount() && t.isRunning()){
 				Task.sleep(50,75);
 			}
 		}
