@@ -12,6 +12,7 @@ import org.powerbot.game.api.Manifest;
 import org.powerbot.game.api.methods.input.Mouse;
 import org.powerbot.game.api.methods.tab.Skills;
 import org.powerbot.game.api.util.Random;
+import org.powerbot.game.api.methods.node.Menu;
 import org.powerbot.game.api.util.Timer;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -27,7 +28,7 @@ import FisherCooker.util.*;
 @Manifest(authors = { "Smart" }, description = "Fishes and cooks trout and salmon at Barbarian Village", name = "SmartBarbFisher")
 
 public class FisherCooker extends ActiveScript implements PaintListener,MessageListener, MouseListener {
-  
+	
 private static final Node[] COOK_JOBS = {new FishNode(), new ChopNode(), new FireNode(), new CookNode()};
 private static final Node[] POWER_JOBS = {new FishNode(), new DropNode()};
 private static final Node ANTIBAN = new AntibanNode();
@@ -75,8 +76,10 @@ private static boolean optionChosen = false;
 			}
 		}
 		return 50;
-	}
 	
+		
+	}
+
 	 private static Image getImage(String url) {
 	        try {
 	            return ImageIO.read(new URL(url));
@@ -134,6 +137,7 @@ private static boolean optionChosen = false;
 	           g.drawString("Click on the preferred option!", 137, 373);
 	    	}
 	    }
+	    
 	    public void messageReceived(MessageEvent e) {
 	        if (e.getMessage().contains("catch a trout"))
 	                troutCaught++;
@@ -163,6 +167,7 @@ private static boolean optionChosen = false;
 				}	
 			}
 		}
+		
 		@Override
 		public void mouseEntered(MouseEvent arg0) {
 			
