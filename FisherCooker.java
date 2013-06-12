@@ -33,14 +33,14 @@ private static final Node[] COOK_JOBS = {new FishNode(), new ChopNode(), new Fir
 private static final Node[] POWER_JOBS = {new FishNode(), new DropNode()};
 private static final Node ANTIBAN = new AntibanNode();
 
-private static int startFishingExp = 0;
-private static int startCookingExp = 0;
-private static int randNum = 0;
-private static int troutCaught = 0;
-private static int salmonCaught = 0;
+private int startFishingExp = 0;
+private int startCookingExp = 0;
+private int randNum = 0;
+private int troutCaught = 0;
+private int salmonCaught = 0;
 
-private static boolean paint = true;
-private static boolean optionChosen = false;
+private boolean paint = true;
+private boolean optionChosen = false;
 	@Override
 	public void onStart(){
 		while(!optionChosen){
