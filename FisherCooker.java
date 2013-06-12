@@ -21,8 +21,8 @@ import javax.imageio.ImageIO;
 import java.io.IOException;
 import java.net.URL;
 
-import FisherCooker.Nodes.*;
-import FisherCooker.Util.*;
+import FisherCooker.nodes.*;
+import FisherCooker.util.*;
 
 @Manifest(authors = { "Smart" }, description = "Fishes and cooks trout and salmon at Barbarian Village", name = "SmartBarbFisher")
 
