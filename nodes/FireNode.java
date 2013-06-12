@@ -7,10 +7,11 @@ import org.powerbot.game.api.methods.tab.Inventory;
 import org.powerbot.game.api.util.Timer;
 import org.powerbot.game.api.wrappers.node.SceneObject;
 
-import FisherCooker.util.*;
+import FisherCooker.util.Methods;
+import FisherCooker.util.VARS;
 
 public class FireNode extends Node{
-  
+	
 	@Override
 	public boolean activate() {
 		return !VARS.fireLit && Inventory.contains(VARS.LOGS_ID);
