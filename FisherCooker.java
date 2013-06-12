@@ -12,7 +12,6 @@ import org.powerbot.game.api.Manifest;
 import org.powerbot.game.api.methods.input.Mouse;
 import org.powerbot.game.api.methods.tab.Skills;
 import org.powerbot.game.api.util.Random;
-import org.powerbot.game.api.methods.node.Menu;
 import org.powerbot.game.api.util.Timer;
 import java.awt.*;
 import java.awt.event.MouseEvent;
