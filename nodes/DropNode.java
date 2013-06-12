@@ -1,4 +1,4 @@
-package FisherCooker.Nodes;
+package FisherCooker.nodes;
 
 
 import org.powerbot.core.script.job.Task;
