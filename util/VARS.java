@@ -1,4 +1,4 @@
-package FisherCooker.Util;
+package FisherCooker.util;
 
 
 public class VARS {
